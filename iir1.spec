@@ -4,7 +4,7 @@
 %define git 20231020
 
 Name: iir1
-Version: 1.9.5
+Version: 1.10.0
 Release: %{?git:0.%{git}.}1
 Source0: https://github.com/berndporr/iir1/archive/refs/heads/master.tar.gz
 Summary: DSP IIR realtime filter library
@@ -38,7 +38,7 @@ An infinite impulse response (IIR) filter library which implements
 Butterworth, RBJ, Chebychev filters.
 
 %prep
-%autosetup -p1 -n %{name}-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n iir1-master
 %cmake -G Ninja
 
 %build
